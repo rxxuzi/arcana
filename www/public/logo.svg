@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 100">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF91C5" />
+            <stop offset="100%" stop-color="#8FCFFF" />
+        </linearGradient>
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF91C5" />
+            <stop offset="100%" stop-color="#8FCFFF" />
+        </linearGradient>
+    </defs>
+    <g transform="translate(10, 10)">
+        <path d="M50 5 L65 20 L80 40 L65 60 L50 75 L35 60 L20 40 L35 20 Z" fill="url(#gradient)" />
+        <path d="M50 10 Q60 20 65 40 Q60 60 50 70 Q40 60 35 40 Q40 20 50 10 Z" fill="url(#gradient)" />
+    </g>
+    <text
+            x="110"
+            y="60"
+            font-family="Arial, sans-serif"
+            font-size="40"
+            font-weight="bold"
+            fill="url(#textGradient)">
+        arcana
+    </text>
+</svg>
