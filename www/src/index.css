@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-[#1B1A1F] text-[#F2F2F2] overflow-hidden;
+  }
+
+  /* Custom Scrollbar Styles */
+  .editor-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #F499F9 #2A2933;
+  }
+
+  .editor-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .editor-scrollbar::-webkit-scrollbar-track {
+    background: #2A2933;
+    border-radius: 4px;
+  }
+
+  .editor-scrollbar::-webkit-scrollbar-thumb {
+    background: #F499F9;
+    border-radius: 4px;
+  }
+
+  .preview-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #B9EAFB #2A2933;
+  }
+
+  .preview-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .preview-scrollbar::-webkit-scrollbar-track {
+    background: #2A2933;
+    border-radius: 4px;
+  }
+
+  .preview-scrollbar::-webkit-scrollbar-thumb {
+    background: #B9EAFB;
+    border-radius: 4px;
+  }
+
+  /* CodeMirror specific styles */
+  .cm-editor {
+    height: 100% !important;
+  }
+
+  .cm-scroller {
+    overflow: auto !important;
+  }
+}
+
+.prose {
+  @apply prose-headings:text-[#F2F2F2]
+    prose-p:text-[#E7E2FF]
+    prose-a:text-[#9C79DE]
+    prose-strong:text-[#F499F9]
+    prose-code:text-[#B9EAFB]
+    prose-pre:bg-transparent
+    prose-pre:p-0
+    prose-blockquote:border-[#9C79DE]
+    prose-blockquote:text-[#C6B0F9]
+    prose-img:rounded-lg
+    prose-img:shadow-lg;
+
+  /* Code block styles */
+  & pre {
+    @apply my-4;
+    
+    & code {
+      @apply font-mono text-sm;
+    }
+  }
+
+  /* Override default prose styles for HTML content */
+  & > div > * {
+    @apply text-[#E7E2FF] my-4;
+  }
+
+  & > div h1,
+  & > div h2,
+  & > div h3,
+  & > div h4,
+  & > div h5,
+  & > div h6 {
+    @apply text-[#F2F2F2] font-bold;
+  }
+}
+
+/* Sidebar Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
